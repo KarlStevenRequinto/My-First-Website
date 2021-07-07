@@ -42,8 +42,8 @@ header ul li a {
     
 }
 :root {
-    --primary: rgba(6, 6, 10, 0.788) ;
-    --secondary: rgba(54, 1, 199, 0.685); 
+    --primary: rgba(1, 1, 26, 0.788) ;
+    --secondary: rgba(125, 109, 165, 0.527); 
 }
 .banner {
     position: relative;
@@ -52,6 +52,77 @@ header ul li a {
     background: linear-gradient(135deg, var(--primary),var(--secondary)),
                 url(IMAGES/BACKGROUND2.jpg) no-repeat center center;
     background-size: cover;
+}
+.container {
+  
+    position: relative;
+    top: 50px;
+    left: 100px;
+    height: 750px;
+    width: 600px;
+    flex-basis: 30%;
     
+    
+}
 
+.my_info {
+    padding: 15px 0px;
+    width: 90%;
+    background-color: rgba(2, 1, 12, 0.952);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px ;
+    color: white;
+    
+}
+.my_info h2 {
+    font-weight: normal;
+}
+.my_info p {
+    font-size: 12px;
+    margin: 6px 0;
+    line-height: 8pt;
+}
+.icons .fab {
+    font-size: 20px;
+    padding: 2px 8px;
+}
+.fa-facebook {
+    color: #1d52bb ;
+}
+.fa-youtube {
+    color: #ff0000 ;
+}
+.fa-github {
+    color: #AD5C51 ;
+}
+.icons {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ;
+}
+.container:hover .icons {
+    max-height: 100px;
+
+}
+.mypiccolored  {
+    position: absolute;
+    height: 700px;
+    top: 50px;
+    max-width: 100%;
+    border-radius: 50% 20% / 45% 35%;
+    background-color: rgba(18, 44, 117, 0.37);
+}
+.mypic  {
+    position: absolute;
+    height: 700px;
+    top: 50px;
+    max-width: 100%;
+    border-radius: 50% 20% / 45% 35%;
+    background-color: rgba(18, 44, 117, 0.37);
+    filter: grayscale(100%);
 }
