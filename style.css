@@ -4,71 +4,81 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body {
-    background-color: rgb(0, 0, 0);
-    min-height: 200vh;
-}
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-    transition: 0.6;
-    padding: 20px 50px;
-    z-index: 100000;
-    background-color: hsl(180, 25%, 3%, 0.5);
-}
-header ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-header ul li {
-    position: relative;
-    list-style: none;
-}
-header ul li a {
-    position: relative;
-    margin: 0 15px;
+a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    letter-spacing: 2px;
-    font-weight: 500px;
-    transition: 0.6s;
+}
+/*top background1*/
+.container {
+    min-height: 100vh;
+    width: 100%;
+   display:flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-basis: 30%;
+}
+/*top background2*/
+.banner {
+    background-image: url(IMAGES/BACKGROUND2.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+.banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(119, 113, 113);
+    opacity: .6;
+    z-index: -1;
+}
+/*NOT PERMANENT FONT COLORS*/
+.boxofmyname {
+    color: rgba(4, 2, 26);
+    font-size: 3rem;
+    display: block;
+    width: fit-content;
+    position: relative;
+   }
+
+.button_resume {
+    display: inline-block;
+    padding: 10px 30px;
+    color:  rgba(4, 2, 26);
+    background-color: transparent;
+    border: 2px solid  rgba(4, 2, 26);
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: 0.5s ease background-color;
+    transition-property: background-color, color;
+}
+.button_resume:hover {
+    color: white;
+    background-color: rgba(4, 2, 26);
+}
+.mypic:hover {
+    filter:grayscale(0%);
+    transform: scale(1.1) rotate(-1deg);
+}
+.boxofmypic {
+    left: 100px;
+    width: 500px;
+    height: 600px;
+    
+    position: relative;
     
 }
-:root {
-    --primary: rgba(1, 1, 26, 0.788) ;
-    --secondary: rgba(255, 255, 255, 0.527); 
-}
-.banner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--primary),var(--secondary)),
-                url(IMAGES/BACKGROUND2.jpg) no-repeat center center;
-    background-size: cover;
-}
-.container {
-    position: relative;
-    top: 50px;
-    left: 100px;
-    height: 750px;
-    width: 600px;
-    flex-basis: 30%;
-}
-
 .my_info {
-    padding: 15px 0px;
+    border-radius: 10px 100px / 120px;
+    padding: 10px 0px;
     width: 90%;
-    background-color: rgba(2, 1, 12, 0.952);
+    background-color: rgba(4, 2, 26, 0.89);
     box-sizing: border-box;
     text-align: center;
-    border-radius: 3px;
+    
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -101,22 +111,28 @@ header ul li a {
     overflow: hidden;
     transition: max-height 1.4s ;
 }
-.container:hover .icons {
+.boxofmypic:hover .icons {
     max-height: 100px;
 }
-
-.mypic  {
-    position: absolute;
-    height: 700px;
-    top: 50px;
-    max-width: 100%;
-    border-radius: 50% 20% / 45% 35%;
-    
-    filter: grayscale(90%);
-    transition: 1s;
-    
-}
-.container:hover .mypic {
+.boxofmypic:hover .mypic {
     transform: scale(1.05) rotate(-5deg);
     filter: grayscale(30%);
+}
+.mypic {
+    width: 500px;
+    height: 600px;
+    border-radius: 50% 20% / 45% 35%;
+    transition: 1s;
+    filter:grayscale(100%)
+}
+span{
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.timelinebox {
+    min-height: 100vh;
+    margin: 0px;
 }
