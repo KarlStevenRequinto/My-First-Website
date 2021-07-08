@@ -43,7 +43,7 @@ header ul li a {
 }
 :root {
     --primary: rgba(1, 1, 26, 0.788) ;
-    --secondary: rgba(125, 109, 165, 0.527); 
+    --secondary: rgba(255, 255, 255, 0.527); 
 }
 .banner {
     position: relative;
@@ -54,15 +54,12 @@ header ul li a {
     background-size: cover;
 }
 .container {
-  
     position: relative;
     top: 50px;
     left: 100px;
     height: 750px;
     width: 600px;
     flex-basis: 30%;
-    
-    
 }
 
 .my_info {
@@ -77,18 +74,17 @@ header ul li a {
     transform: translateX(-50%);
     bottom: -50px ;
     color: white;
-    
 }
 .my_info h2 {
     font-weight: normal;
 }
 .my_info p {
-    font-size: 12px;
+    font-size: 14x;
     margin: 6px 0;
     line-height: 8pt;
 }
 .icons .fab {
-    font-size: 20px;
+    font-size: 30px;
     padding: 2px 8px;
 }
 .fa-facebook {
@@ -107,22 +103,20 @@ header ul li a {
 }
 .container:hover .icons {
     max-height: 100px;
+}
 
-}
-.mypiccolored  {
-    position: absolute;
-    height: 700px;
-    top: 50px;
-    max-width: 100%;
-    border-radius: 50% 20% / 45% 35%;
-    background-color: rgba(18, 44, 117, 0.37);
-}
 .mypic  {
     position: absolute;
     height: 700px;
     top: 50px;
     max-width: 100%;
     border-radius: 50% 20% / 45% 35%;
-    background-color: rgba(18, 44, 117, 0.37);
-    filter: grayscale(100%);
+    
+    filter: grayscale(90%);
+    transition: 1s;
+    
+}
+.container:hover .mypic {
+    transform: scale(1.05) rotate(-5deg);
+    filter: grayscale(30%);
 }
