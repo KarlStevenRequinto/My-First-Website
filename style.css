@@ -18,7 +18,7 @@ a {
 }
 /*top background2*/
 .banner {
-    background-image: url(IMAGES/BACKGROUND2.jpg);
+    background-image: url(images/BACKGROUND2.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
