@@ -132,7 +132,15 @@ span{
     top: 0px;
     left: 0px;
 }
-.timelinebox {
+#mytimeline {
+    background-color: #AD5C51;
     min-height: 100vh;
     margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
 }
+
