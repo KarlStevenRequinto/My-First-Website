@@ -133,14 +133,66 @@ span{
     left: 0px;
 }
 #mytimeline {
+    padding: 30px;
     background-color: #AD5C51;
-    min-height: 100vh;
+    min-height: 150vh;
     margin: 0px;
     box-sizing: border-box;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-
+}
+.timelinebox {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background-color: darkblue;
+}
+.timelinebox ul {
+    list-style: none;
 }
 
+.timelinebox ul li {
+    padding: 20px;
+    background-color:blueviolet;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.timelinebox ul li:last-child {
+    margin-bottom: 0;
+}
+.timelineinnerbox h1{
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timelineinnerbox p {
+    line-height: 30px;
+    font-weight: 300;
+}
+@media only screen and (min-width: 768px) {
+    .timelinebox::before {
+        content:'';
+        position: absolute;
+        height:100%;
+        width: 4px;
+        background-color: cyan;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    .timelinebox ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timelinebox ul li:nth-child(odd) {
+        float: right;
+        transform: translateX(30px);
+    }
+    .timelinebox ul li:nth-child(even) {
+        float: left;
+        transform: translateX(-30px);
+    }
+}
