@@ -165,4 +165,7 @@ h1,h2,h3,h4,h5,h6 {
 /* ====== FOR MOBILE PURPOSES ======
 NEED TO FIND A WAY TO MAKE WEBSITE RESPONSIVE EVEN ON MOBILE PHONE */
 
-/* SECTION 1 (BANNER) */
+/* SECTION 2 - ABOUT ME */
+.aboutmebox {
+    background-color: aquamarine;
+}
