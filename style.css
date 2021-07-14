@@ -2,7 +2,7 @@
 /*============== GENERAL ==============*/
 body {
     font-family: "Open sans", sans-serif;
-    color: rgb(128, 123, 123);
+    color: rgb(214, 164, 164);
     position: relative;
     background: transparent;
     background-color: rgb(29, 28, 28);
@@ -36,6 +36,9 @@ h1,h2,h3,h4,h5,h6 {
     font-family: sans-serif;
 }
 /* ============== ID HEADER ==============*/
+.bannerbox h1 span {
+    background-color: rgb(0, 255, 98);
+}
 #idheader {
     transition: ease-in-out 0.3s;
     position: relative;
@@ -65,14 +68,14 @@ h1,h2,h3,h4,h5,h6 {
 #idheader h2 {
     font-size: 24px;
     margin-top: 20px;
-    color: darkcyan;
+    color: rgb(0, 255, 98);
 }
 #idheader h2 span {
     color: rgb(128, 123, 123);
     padding-bottom: 6px;
 }
 #idheader h2 span:hover {
-    color: rgb(231, 0, 0);
+    color: rgb(0, 255, 98);
     padding-bottom: 6px;
 }
 #idheader .icons {
@@ -117,16 +120,19 @@ h1,h2,h3,h4,h5,h6 {
 /* ================= NAVIGATION =================*/
 .nav-menu {
     margin-top: -500px;
-    margin-left: 144%;  
+    margin-left: 144%;
+    
 }
 .nav-menu ul {
     display: flex;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    
 }
 .nav-menu li + li {
     margin-left: 30px;
+    
 }
 .nav-menu a {
     display: block;
