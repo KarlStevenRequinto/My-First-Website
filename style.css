@@ -1,177 +1,133 @@
-
-/*============== GENERAL ==============*/
-body {
-    font-family: "Open sans", sans-serif;
-    color: rgb(214, 164, 164);
-    position: relative;
-    background: transparent;
-    background-color: rgb(29, 28, 28);
-}
-body::before {
-    content: "";
-    position: fixed;
-    background-color: rgb(29, 28, 28);
-    left: 0;
-    background-size: cover;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -1;
-}
-@media (min-width: 1024px) {
-    body::before {
-        background-attachment: fixed;
-    }
-}
-a {
-    color: rgb(128, 123, 123);
-    text-decoration: none;
-}
-a:hover {
-    color: rgb(128, 123, 123);
-    text-decoration: none;
-}
-h1,h2,h3,h4,h5,h6 {
-    /*change font*/
-    font-family: sans-serif;
-}
-/* ============== ID HEADER ==============*/
-.bannerbox h1 span {
-    background-color: rgb(0, 255, 98);
-}
-#idheader {
-    transition: ease-in-out 0.3s;
-    position: relative;
-    height: 100vh;
-    display:flex;
-    align-items: center;
-    z-index: 997;
-    overflow-y: auto;
-}
-#idheader * {
-    transition: ease-in-out 0.3s;
-}
-#idheader h1 {
-    font-size: 48px;
-    margin: 0;
+* {
     padding: 0;
-    line-height: 1;
-    font-weight: 700;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    
 }
-#idheader h1 a,
-#idheader h1 a:hover {
-    color:rgb(0, 255, 98);
-    line-height: 1;
-    display: inline-block;
-}
-#idheader h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: rgb(0, 255, 98);
-}
-#idheader h2 span {
-    color: rgb(128, 123, 123);
-    padding-bottom: 6px;
-}
-#idheader h2 span:hover {
-    color: rgb(0, 255, 98);
-    padding-bottom: 6px;
-}
-#idheader .icons {
-    margin-top: 40px;
+/* ========== BANNER BACKGROUND ========== */
+#banner {
+    min-height: 100vh;
+    width: 100%;
     display: flex;
-}
-#idheader .icons a {
-    /* ========= NOT PERMANENT COLOR =========*/
-    font-size: 16px;
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    background: rgb(197, 178, 171, 0.1);
-    color:rgb(128, 123, 123);
-    line-height: 1;
-    margin-right: 8px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-#idheader .icons a:hover {
-    background: cornflowerblue;  
-}
-/* =========== RESPONSIVE CODE ===========*/
-@media (max-width: 992px) {
-    #idheader h1 {
-        font-size: 36px;
-    }
-    #idheader h2 {
-        font-size: 20px;
-        line-height: 30px;
-    }
-    #idheader .icons {
-        margin-top: 15px;
-    }
-    #idheader .bannerbox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-/* ================= NAVIGATION =================*/
-.nav-menu {
-    margin-top: -500px;
-    margin-left: 144%;
-    
-}
-.nav-menu ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    
-}
-.nav-menu li + li {
-    margin-left: 30px;
-    
-}
-.nav-menu a {
-    display: block;
+    background-color:rgb(10, 9, 9);
+    z-index: 1;
     position: relative;
-    color: rgb(128, 123, 123);
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
 }
-/* == BEFORE == */
-.nav-menu a::before,
-.nav-menu li:hover > a::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color:rgb(255, 0, 0) ;
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-}
-.nav-menu a:hover::before,
-.nav-menu li:hover > a::before,
-.nav-menu .active::before {
-    visibility: visible;
-    width: 25px;
-}
-.nav-menu a:hover,
-.nav-menu .active > a,
-.nav-menu li:hover > a {
-    color: rgb(128, 123, 123);
-    text-decoration: none;
-}
-/* ====== FOR MOBILE PURPOSES ======
-NEED TO FIND A WAY TO MAKE WEBSITE RESPONSIVE EVEN ON MOBILE PHONE */
 
-/* SECTION 2 - ABOUT ME */
-.aboutmebox {
-    background-color: rgb(44, 26, 148);
+/* ========== BANNER TEXT ========== */
+.bannerbox {
+    color: rgb(54, 228, 112);
+    margin-right: 50px;
+    position: relative;
+    bottom: 30px;
+    padding: 20px;
+}
+.bannerbox h1{
+    color: transparent;
+    font-size: 45px;
+    position: relative;
+    display: block;
+    width: fit-content;
+    animation: text_name_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+.bannerbox h1:nth-child(1) span {
+    animation-delay: 1s;
+}
+.bannerbox h1:nth-child(2) span {
+    animation-delay: 2s;
+}
+.bannerbox h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.bannerbox h1 span {
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 0;
+   background-color: rgb(54, 228, 112);
+   position: absolute;
+   animation: name_reveal 1s ease;
+   animation-delay: 1s;
+}
+.bannerbox p span {
+    color: rgb(255, 255, 255);
+}
+.bannerbox p span:hover {
+    color: rgb(54, 228, 112);
+    transition: 0.5s;
+}
+.bannerbox p {
+    font-size: 20px;
+}
+/* ========== BANNER TEXT ANIMATIOON ========== */
+@keyframes name_reveal {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left:100%
+    }
+}
+@keyframes text_name_reveal {
+    100% {
+        color: white;
+    }
+}
+
+/* ========== MY PICTURE ========== */
+.picbox {
+    width: 600px;
+    height: auto;
+    top: 25px;
+    position: relative;
+}
+.mypic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    filter: grayscale(90%);
+    transition: 1s;
+}
+.mypic:hover {
+    filter: grayscale(40%);
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+}
+/* ========== MY ICONS ========== */
+.icons {
+    font-size: 40px;
+    display: flex;
+    margin-top: 20px; 
+}
+.icons a {
+    color: rgb(54, 228, 112);
+    
+    padding-right: 20px;
+}
+/* ========== ABOUT ME ========== */
+#aboutme {
+    background-color: rgb(17, 15, 15);
+    min-height: 80vh;
+    position: relative;
+    padding: 50px;
+    width: auto;
+    
+}
+.leftboxabout {
+    width: 100px;
+    height: auto;
+}
+.rightboxabout {
+    width: 100px;
+    height: auto;
 }
