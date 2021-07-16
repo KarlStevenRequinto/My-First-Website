@@ -151,14 +151,16 @@
 }
 .rightboxabout {
     position: relative;
-    
     height: auto;
     margin: 50px;
     width: 500px;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: white;
+    text-align: justify;
+}
+.rightboxabout:nth-last-child(4) {
+    text-align: center;
 }
 .mypicaboutme {
     width: 100%;
@@ -176,7 +178,6 @@
     text-decoration: none;
     color:rgb(54, 228, 112);
     background-color: transparent;
-   
     position: relative;
 }
 .rightboxabout p {
@@ -184,4 +185,138 @@
 }
 .headeraboutme h1 span {
     color: rgb(54, 228, 112);
+}
+/* ========== TIMELINE ========== */
+#timelinebox {
+    color: white;
+    background-color: rgb(10, 9, 9);
+    height: auto;
+    width: 100%; 
+}
+.timelineinnerbox {
+    padding: 100px;
+    position: relative;
+    width: 100%;
+    
+}
+ul li {
+    text-decoration: none;
+    list-style: none;
+}
+.timelineinnerbox ul li {
+    position: relative;
+    width: 50%;
+}
+.timelineinnerbox::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    bottom: 100px;
+    background-color: transparent;
+    left: 50%;
+    top: 200px;
+}
+.timelineinnerbox ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+.timelineinnerbox ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.timelineinnerbox ul li:nth-child(odd) .rows {
+    margin-right: 100px;   
+}
+.timelineinnerbox ul li:nth-child(even) .rows {
+    margin-left: 100px;   
+}
+.rows {
+    position: relative;
+    margin: 50px;
+    padding: 20px;
+}
+
+.timelineinnerbox ul::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.timelineinnerbox ul li:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 50%;
+    right: -150px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    border: 4px solid rgb(54, 228, 112);
+}
+.timelineinnerbox ul li:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 50%;
+    left: -150px;
+    top: 47%;
+    transform: translate(0%,-50%);
+    border: 4px solid rgb(54, 228, 112);
+}
+.timelineinnerbox ul li:nth-child(1)::before {
+    background-image: url(images/teleperformance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(2)::before {
+    background-image: url(images/unorecoletos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(3)::before {
+    background-image: url(images/eceboardexampassers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(4)::before {
+    background-image: url(images/rockwellcollins.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(5)::before {
+    background-image: url(images/tonghsing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(6)::before {
+    background-image: url(images/ibm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.timelineinnerbox ul li:nth-child(7)::before {
+    background-image: url(images/toshiba.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.rows h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+.contacts {
+    background-color: tomato;
+    min-height: 50vh;
 }
