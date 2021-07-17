@@ -314,9 +314,101 @@ ul li {
     font-size: 25px;
     margin-bottom: 10px;
 }
-
-
+/* ========== CONTACTS ========== */
 .contacts {
-    background-color: tomato;
-    min-height: 50vh;
+    padding: 20px;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    
+    color: white;
+}
+.mainboxcontacts {
+    
+    font-family: "Poppins, sans serif";
+    align-items: center;
+    justify-content: center;
+    
+}
+.innerboxcontacts {
+    padding: 20px;
+    font-family: "Poppins, sans serif";
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: solid white;
+    width: 80%;
+    
+    position: relative;
+    left: 10%;
+    border-radius: 10px;
+}
+.boxleftcontacts {
+    width: 500px;
+    
+    text-align: left;
+    padding: 10px;
+    
+}
+.boxrightcontacts {
+    padding: 10px;
+    width: 500px;
+    
+    text-align: left;
+}
+.boxleftcontacts h1 {
+    font-size: 20px;
+    text-align: center;
+}
+.boxrightcontacts p {
+    text-align: justify;
+}
+.iconscontacts {
+    margin: 20px 0;
+}
+.rowcontacts {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.fas {
+    font-size: 25px;
+    margin: 10px;
+}
+.infocontacts {
+    margin-left: 10px;
+}
+.fa-home {
+    font-size: 23px;
+}
+.fa-user {
+    font-size: 29px;
+}
+.textrightboxcontacts {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: rgb(54, 228, 112);
+}
+.boxrightcontacts p {
+    font-size: 15px;
+}
+.boxrightcontacts i {
+    color:rgb(54, 228, 112);
+}
+
+.titlecontacts {
+    font-weight: bold;
+}
+.subtitlecontacts {
+    font-size: 15px;
+}
+.contacts .mainboxcontacts .titleofcontacts span{
+    color:  rgb(54, 228, 112);
+    font-size: 28px;
+}
+.boxleftcontacts h1 {
+    font-size: 20px;
+    color:rgb(54, 228, 112);
+}
+.field {
+    margin-bottom: 5px;
 }
