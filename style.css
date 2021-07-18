@@ -3,7 +3,59 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
     
+}
+/* ========== NAV BAR ========== */
+.navbar {
+    position: fixed;
+    /*background-color when scroll: rgb(41, 43, 42);*/
+    transition: all 0.3s ease;
+    z-index: 9999;
+    width: 100%;
+    padding: 10px 0;
+}
+.navbar.sticky {
+    padding: 8px 0;
+    background-color: rgb(0, 240, 120, 0.6);
+}
+.navbarbox {
+    padding: 5px 80px;
+    margin: auto;
+}
+.navbar .navbarbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .lerdrobott a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .lerdrobott a span {
+    color: rgb(54, 228, 112);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .lerdrobott a span {
+    color: rgb(22, 22, 22);
+}
+.navbar .menu li {
+    display: inline-block;
+    list-style: none;
+}
+.navbar .menu li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-left: 25px;
+    transition: color   0.3s ease;
+}
+.navbar .menu li a:hover {
+    color:rgb(54, 228, 112);
+}
+.navbar.sticky .menu li a:hover {
+    color: rgb(22, 22, 22);
 }
 /* ========== BANNER BACKGROUND ========== */
 #banner {
@@ -20,11 +72,10 @@
 /* ========== BANNER TEXT ========== */
 .bannerbox {
     color: rgb(54, 228, 112);
-    
     position: relative;
     bottom: 30px;
     width: 800px;
-    left: 20px;
+    left: 10px;
 }
 .bannerbox h1{
     color: transparent;
@@ -44,7 +95,6 @@
 .bannerbox h1:nth-child(2) {
     animation-delay: 2.5s;
 }
-
 .bannerbox h1 span {
    top: 0;
    left: 0;
@@ -84,10 +134,9 @@
 
 /* ========== MY PICTURE ========== */
 .picbox {
-    width: 600px;
-    height: 600px;   
+    width: 700px;
+    height: 700px;   
     position: relative;
-    margin-left: 10px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -97,17 +146,17 @@
 }
 .mypic {
     width: 100%;
-    height: 600px;
+    height: 650px;
     border-radius: 50%;
     position: relative;
     filter: grayscale(90%);
     transition: 0.7s;
     align-items: center;
     justify-content: center;
-    
+    left: 5px; 
 }
 .mypic:hover {
-    filter: grayscale(40%);
+    filter: grayscale(20%);
     max-width: 100%;
     border-radius: 50%;
     position: relative;
@@ -327,7 +376,6 @@ ul li {
     font-family: "Poppins, sans serif";
     align-items: center;
     justify-content: center;
-    
 }
 .innerboxcontacts {
     padding: 20px;
@@ -337,14 +385,13 @@ ul li {
     justify-content: center;
     border: solid white;
     width: 80%;
-    
     position: relative;
     left: 10%;
     border-radius: 10px;
 }
 .boxleftcontacts {
     width: 500px;
-    
+    margin: 10px;
     text-align: left;
     padding: 10px;
     
@@ -352,7 +399,7 @@ ul li {
 .boxrightcontacts {
     padding: 10px;
     width: 500px;
-    
+    margin: 10px;
     text-align: left;
 }
 .boxleftcontacts h1 {
