@@ -55,18 +55,24 @@
     color:rgb(54, 228, 112);
 }
 .navbar.sticky .menu li a:hover {
-    color: rgb(22, 22, 22);
+    color: hsl(0, 0%, 9%);
 }
 /* ========== BANNER BACKGROUND ========== */
+:root {
+    --primary: hsla(0, 0%, 9%,0.65);
+    --secondary: hsla(0, 5%, 4%,0.65);
+}
 #banner {
     width: 100%;
     display: flex;
     align-items: center;
     padding: 90px;
-    background-color:rgb(10, 9, 9);
+    
     position: relative;
     justify-content: center;
     height: 100vh;
+    
+    background: linear-gradient(135deg,var(--primary), var(--secondary)),url(images/background.jpg) no-repeat center center / cover;
 }
 
 /* ========== BANNER TEXT ========== */
@@ -76,6 +82,8 @@
     bottom: 30px;
     width: 800px;
     left: 10px;
+    
+    
 }
 .bannerbox h1{
     color: transparent;
@@ -85,6 +93,7 @@
     width: fit-content;
     animation: text_name_reveal .5s ease forwards;
     animation-delay: 1.5s;
+    
 }
 .bannerbox h1:nth-child(1) span {
     animation-delay: 1s;
@@ -135,25 +144,23 @@
 /* ========== MY PICTURE ========== */
 .picbox {
     width: 700px;
-    height: 700px;   
+    height: 800px;   
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
     right: 20px;
-    top: 20px;
-    
+    top: 20px;  
 }
 .mypic {
     width: 100%;
-    height: 650px;
+    height: 800px;
     border-radius: 50%;
     position: relative;
     filter: grayscale(90%);
     transition: 0.7s;
     align-items: center;
     justify-content: center;
-    left: 5px; 
 }
 .mypic:hover {
     filter: grayscale(20%);
@@ -163,15 +170,34 @@
 }
 /* ========== MY ICONS ========== */
 .icons {
-    font-size: 40px;
     display: flex;
-    margin-top: 20px; 
+    margin-top: 30px;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    
 }
 .icons a {
     color: rgb(54, 228, 112);
-    
-    padding-right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    position: relative;
+    font-size: 35px;
+    border: solid 1.5px rgb(54, 228, 112);
+    transition: 0.3s ease;
 }
+.icons a:hover {
+    transform: scale(1.1);
+    color: hsl(0, 5%, 4%);
+    border: solid 2px hsl(0, 5%, 4%);
+    background-color: rgb(54, 228, 112);
+}
+
 /* ========== ABOUT ME ========== */
 #aboutme {
     background-color: rgb(22, 22, 22);
