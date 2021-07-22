@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
 html {
     scroll-behavior: smooth;
+    
 }
 /* ========== NAV BAR ========== */
 .navbar {
@@ -36,10 +38,12 @@ html {
     color: white;
     font-size: 35px;
     font-weight: 600;
+    font-family: 'Lobster', cursive;
 }
 .navbar .lerdrobott a span {
     color: rgb(54, 228, 112);
     transition: all 0.3s ease;
+    font-family: 'Lobster', cursive;
 }
 .navbar.sticky .lerdrobott a span {
     color: rgb(22, 22, 22);
@@ -64,18 +68,16 @@ html {
 /* ========== BANNER BACKGROUND ========== */
 :root {
     --primary: hsla(0, 0%, 9%,0.65);
-    --secondary: hsla(0, 5%, 4%,0.65);
+    --secondary: rgba(0, 0, 0, 0.65);
 }
 #banner {
     width: 100%;
     display: flex;
     align-items: center;
     padding: 90px;
-    
     position: relative;
     justify-content: center;
-    height: 100vh;
-    
+    height: 100vh;  
     background: linear-gradient(135deg,var(--primary), var(--secondary)),url(images/background.jpg) no-repeat center center / cover;
 }
 
@@ -86,8 +88,6 @@ html {
     bottom: 30px;
     width: 800px;
     left: 10px;
-    
-    
 }
 .bannerbox h1{
     color: transparent;
@@ -204,13 +204,13 @@ html {
 
 /* ========== ABOUT ME ========== */
 #aboutme {
-    background-color: rgb(22, 22, 22);
+    background-image: linear-gradient(45deg, rgb(0, 0, 0),#1c1717);
     margin: auto;
     height: 100%;
     width: 100%;
 }
 .aboutmebox {
-    background-color: rgb(22, 22, 22);
+    
     display: flex;
     position: relative;
     justify-content: center;
@@ -232,11 +232,12 @@ html {
     position: relative;
     height: auto;
     margin: 50px;
-    width: 500px;
+    width: 600px;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: justify;
+    
 }
 .rightboxabout:nth-last-child(4) {
     text-align: center;
@@ -278,14 +279,22 @@ html {
 /* ========== TIMELINE ========== */
 #timelinebox {
     color: white;
-    background-color: rgb(10, 9, 9);
+    background-image: linear-gradient(45deg, #1c1717,rgb(0, 0, 0),#1c1717);
     height: auto;
     width: 100%; 
+    padding-right: 50px;
 }
+
 .timelineinnerbox {
-    padding: 100px;
+    
     position: relative;
     width: 100%;
+    text-align: center;
+}
+.timelineinnerbox h1 {
+    font-size: 35px;
+    position: relative;
+    top: 30px;
     
 }
 ul li {
@@ -326,6 +335,9 @@ ul li {
     position: relative;
     margin: 50px;
     padding: 20px;
+}
+.rows h2 {
+    color:rgb(54, 228, 112);
 }
 
 .timelineinnerbox ul::after {
@@ -406,14 +418,13 @@ ul li {
 /* ========== CONTACTS ========== */
 .contacts {
     padding: 20px;
-    background-color: rgb(22, 22, 22);
+    background-image: linear-gradient(45deg, rgb(0, 0, 0),#1c1717);
     text-align: center;
     
     color: white;
 }
 .mainboxcontacts {
     
-    font-family: "Poppins, sans serif";
     align-items: center;
     justify-content: center;
 }
@@ -428,6 +439,7 @@ ul li {
     position: relative;
     left: 10%;
     border-radius: 10px;
+    
 }
 .boxleftcontacts {
     width: 500px;
@@ -445,6 +457,7 @@ ul li {
 .boxleftcontacts h1 {
     font-size: 20px;
     text-align: center;
+    margin-bottom: 10px;
 }
 .boxrightcontacts p {
     text-align: justify;
@@ -497,5 +510,26 @@ ul li {
     color:rgb(54, 228, 112);
 }
 .field {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+}
+.field input {
+    color: white;
+    border: 0;
+    width: 250px;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+.field textarea {
+    color: white;
+    width: 400px;
+    background: transparent;
+    border: 1px solid white;
+}
+.field button {
+    background: transparent;
+    width: 150px;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    
 }
